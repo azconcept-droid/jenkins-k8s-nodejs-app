@@ -26,7 +26,11 @@ k expose deployment node-app --port 5000 --target-port 3000 --type NodePort
 
 ## Launch Jenkins
 cd jenkins  
-docker compose up -d --build  
+docker compose up -d --build
+## Access your jenkins from internet
+```
+http://<server-ip>:8090
+```
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword  
 
 -- Destroy jenkins  
